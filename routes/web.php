@@ -25,7 +25,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-route::get('/redirect',[HomeController::class,'redirect'])->middleware('auth', 'verified')->name('redirect');
+route::get('/redirect',[HomeController::class,'redirect'])->middleware('auth')->name('redirect');
 
 
 Route::group(['middleware' => ['auth','admin']],function (){
